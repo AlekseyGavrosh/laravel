@@ -12,29 +12,31 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/public/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/public/js"></script>
+    <script src="/public/js/bootstrap.js.map"></script>
 
     <!-- Custom styles for this template -->
     <link href="/public/css/dashboard.css" rel="stylesheet">
 </head>
 
 <body>
-<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+
+
+<nav class="navbar navbar-toggleable-md navbar-inverse navbar-expand-lg navbar-light bg-light fixed-top bg-inverse">
     <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Dashboard Верхнее меню</a>
+    <a class="navbar-brand" href="/admin">Главная</a>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Домой домой домой <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Тут  вторая ссылка <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Нас трой ки</a>
+                <a class="nav-link" href="#">Настройки</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
+                <a class="nav-link" href="#">Всякие другие настройки</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Help</a>
@@ -47,21 +49,22 @@
     </div>
 </nav>
 
+
 <div class="container-fluid">
     <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
+                    <a class="nav-link " href="#">Категории</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Reports</a>
+                    <a class="nav-link" href="#">Статьи</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Analytics</a>
+                    <a class="nav-link" href="#">Пользователи</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Export</a>
+                    <a class="nav-link" href="#">Комментарии</a>
                 </li>
             </ul>
 
@@ -69,18 +72,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Nav item</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nav item again</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">One more nav</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Another nav item</a>
-                </li>
-            </ul>
-
-            <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Nav item again</a>
                 </li>
