@@ -55,10 +55,10 @@
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Категории</a>
+                    <a class="nav-link " href="{!! route('categories.add') !!}">Категории</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Статьи</a>
+                    <a class="nav-link" href="{!! route('categories') !!}">Статьи</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Пользователи</a>
@@ -95,5 +95,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="/public/js/bootstrap.js"></script>
 <script src="/public/js/bootstrap_second.js"></script>
+<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
 </body>
 </html>

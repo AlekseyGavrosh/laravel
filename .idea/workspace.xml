@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="538c1582-3aa2-43ff-b6d8-6f65a9ead44f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +175,9 @@
       <workItem from="1571984097911" duration="21636000" />
       <workItem from="1572242368251" duration="3728000" />
       <workItem from="1572248677627" duration="5276000" />
-      <workItem from="1572261546320" duration="7489000" />
+      <workItem from="1572261546320" duration="9302000" />
+      <workItem from="1572330529844" duration="8356000" />
+      <workItem from="1572350260735" duration="5688000" />
     </task>
     <task id="LOCAL-00001" summary="Проверка">
       <created>1571820749553</created>
@@ -195,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572268776137</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Исправлено  описание">
+      <created>1572269209456</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572269209456</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +225,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -217,6 +238,7 @@
     <MESSAGE value="Первое залитие уже после композера" />
     <MESSAGE value="Админка с аутенцификацией." />
     <MESSAGE value="php artisan make:controller Admin/CategoriesController   создал контроллеры и правка верхнего меню" />
-    <option name="LAST_COMMIT_MESSAGE" value="php artisan make:controller Admin/CategoriesController   создал контроллеры и правка верхнего меню" />
+    <MESSAGE value="Исправлено  описание" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлено  описание" />
   </component>
 </project>
