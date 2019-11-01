@@ -6,21 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Entities\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
-    */
 
     use RegistersUsers;
 
@@ -29,7 +21,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'my/account';
+    protected $redirectTo = 'main';
 
     /**
      * Create a new controller instance.
@@ -52,24 +44,31 @@ class RegisterController extends Controller
 //            dd($e);
 //        }
 
+//        Schema::table('users', function ($table) {
+//            $table->string('name');
+//        });
+
+        $name = $request->input('name');
         $email = $request->input('email');
         $password = $request->input('password');
-        $isAuth = $request->has('remember') ? true : false;
+        $isAuth = $remember = $request->has('remember') ? true : false;
 
-        $objUser = $this->create(['email' => $email, 'password' => $password]);
+
+        $objUser = $this->create(['email' => $email, 'password' => $password, 'name' => $name,]);
      //   $this->guard()->login($user);
 
         if(!($objUser instanceof User)) {
-           // throw new \Exception("Can't create object");
-            return back()->with('error', 'Can"t create object');
+            return back()->with('errors', 'Can"t create object');
         }
 
         if ($isAuth) {
             $this->guard()->login($objUser);
         }
 
+        Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $remember);
 
-        return redirect(route('account'))->with('success', ' Вы успешно зарегины');
+            return redirect(route('main'))->with('success', ' Вы успешно зарегины');
+
     }
 
 
@@ -97,6 +96,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

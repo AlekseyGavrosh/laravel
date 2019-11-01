@@ -10,16 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
+
 
     use AuthenticatesUsers;
 
@@ -51,14 +42,14 @@ class LoginController extends Controller
             $remember = $request->has('remember') ? true : false;
             if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $remember)) {
 
-                return redirect(route('account'))->with('success', trans('messages.auth.successLogin'));
+                return redirect(route('main'))->with('success', trans('Вы успешно залогинены')); // это  должна быть ссылка на файл с сообщениями messages.auth.successLogin
             }
-            return back()->with('error', trans('messages.auth.errorLogin'));
+            return back()->with('errors', trans('messages.auth.errorLogin'));
         }
         catch (ValidationException $e) {
 
             \Log::error($e->getMessage());
-            return back()->with('error', trans('messages.auth.errorLogin'));
+            return back()->with('errors', trans('messages.auth.errorLogin'));
             }
 
     }

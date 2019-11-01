@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Entities\Category;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoriesRequest;
 use Dotenv\Exception\ValidationException;
 use Illuminate\Http\Request;
 
@@ -23,13 +24,18 @@ class CategoriesController extends Controller
 
     }
 
-    public function  addRequestCategory(Request $request) {
+    /**
+     * @param CategoriesRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function  addRequestCategory(CategoriesRequest $request) {
 
         try {
 
-            $this->validate($request, [
-                'title' => 'required|string|min:4|max:130'
-            ]);
+//            $this->validate($request, [
+//                'title' => 'required|string|min:4|max:130'
+//            ]);
 
             $objCategory = new Category();
             $objCategory = $objCategory->create([
@@ -37,14 +43,14 @@ class CategoriesController extends Controller
                 'description' => $request->input('description')
             ]);
             if ($objCategory) {
-                return back()->with('success', 'категория успешно добавлена');
+                return redirect()->route('categories')->with('success', 'Категория успешно добавлена');
             }
 
-            return back()->with('error', 'категория не добавлена');
+            return back()->with('errors', 'категория не добавлена');
         }
         catch (ValidationException $e) {
             \Log::error($e->getMessage());
-            return back()->with('error', $e->getMessage());
+            return back()->with('errors', $e->getMessage());
         }
         // dd($request->all());
     }
@@ -75,7 +81,8 @@ class CategoriesController extends Controller
         try {
 
             $this->validate($request, [
-                'title' => 'required|string|min:4|max:130'
+                'title' => 'required|string|min:4|max:130',
+                'description' => 'required'
             ]);
 
             $objCategory = Category::find($id);
@@ -99,7 +106,7 @@ class CategoriesController extends Controller
         }
         catch (ValidationException $e) {
             \Log::error($e->getMessage());
-            return back()->with('error', $e->getMessage());
+            return back()->with('errors', $e->getMessage());
         }
 
     }
@@ -108,6 +115,11 @@ class CategoriesController extends Controller
     {
 
         if ($request->ajax()) {
+            $id = (int)$request->input('id');
+            $objCategory = new Category();
+
+            $objCategory->where('id', $id)->delete();
+            echo 'success';
 
         }
     }

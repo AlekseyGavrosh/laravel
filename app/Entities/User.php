@@ -20,6 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'name',
         'email',
         'password',
     ];
@@ -40,6 +41,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'id' => 'integer',
+        'name' => 'string',
         'email' => 'string',
         'password' => 'string',
         'isAdmin' => 'boolean',
