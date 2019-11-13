@@ -12,8 +12,6 @@ class CategoryArticle extends Model
     protected  $fillable = [
         'category_id',
         'article_id',
-
-
     ];
 
     protected $dates = [

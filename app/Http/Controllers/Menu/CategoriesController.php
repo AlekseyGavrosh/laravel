@@ -1,27 +1,48 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Menu;
 
 use App\Entities\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoriesRequest;
 use Dotenv\Exception\ValidationException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CategoriesController extends Controller
 {
     public function index()
     {
-        $objCategory = new Category();
-        $categories = $objCategory->get();
 
-        return view('admin.categories.index', ['categories' => $categories]);
+        $categories = DB::table('categories')
+            ->select('categories.*')
+            ->paginate(10);
+
+        foreach ($categories->all() as &$item) {
+
+            $item->count_articles = DB::table('category_articles')
+                ->where('category_id', '=', $item->id)
+                ->count();
+
+            if (!empty($item->parent_id) && isset($item->parent_id)) {
+                $parent = Category::find($item->parent_id);
+                $item->parent_name = $parent->title;
+            }
+            else {
+                $item->parent_name = 'Нет родителя';
+            }
+
+        }
+
+        return view('menu.categories.index', ['categories' => $categories]);
     }
 
     public function addCategory()
     {
-        return view('admin.categories.add');
+        $objCategory = new Category();
+        $categories = $objCategory->get();
 
+        return view('menu.categories.add', ['categories' => $categories,]);
     }
 
     /**
@@ -29,10 +50,9 @@ class CategoriesController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function  addRequestCategory(CategoriesRequest $request) {
-
+    public function addRequestCategory(CategoriesRequest $request)
+    {
         try {
-
 //            $this->validate($request, [
 //                'title' => 'required|string|min:4|max:130'
 //            ]);
@@ -40,21 +60,18 @@ class CategoriesController extends Controller
             $objCategory = new Category();
             $objCategory = $objCategory->create([
                 'title' => $request->input('title'),
-                'description' => $request->input('description')
+                'description' => $request->input('description'),
+                'parent_id'   => $request->input('categories')
             ]);
             if ($objCategory) {
                 return redirect()->route('categories')->with('success', 'Категория успешно добавлена');
             }
-
             return back()->with('errors', 'категория не добавлена');
-        }
-        catch (ValidationException $e) {
+        } catch (ValidationException $e) {
             \Log::error($e->getMessage());
             return back()->with('errors', $e->getMessage());
         }
-        // dd($request->all());
     }
-
 
     /**
      * @param int $id
@@ -67,7 +84,14 @@ class CategoriesController extends Controller
             return abort(404);
         }
 
-        return view('admin.categories.edit', ['category' => $category]);
+        $objCategory = new Category();
+        $categories = $objCategory->get();
+
+
+        return view('menu.categories.edit', [
+            'category' => $category,
+            'categories' => $categories
+        ]);
     }
 
     /**
@@ -76,7 +100,8 @@ class CategoriesController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function  editRequestCategory(Request $request, int $id) {
+    public function editRequestCategory(Request $request, int $id)
+    {
 
         try {
 
@@ -93,25 +118,23 @@ class CategoriesController extends Controller
 
             $objCategory->title = $request->input('title');
             $objCategory->description = $request->input(('description'));
+            $objCategory->parent_id = $request->input('categories');
 
             if ($objCategory->save()) {
 
-               return self::index();
-
-              //  return  back()->with('success', 'Категория успешно изменена');
+                return redirect()->route('categories')->with('success', 'Категория успешно   сохранена');
             }
 
-            return  back()->with('success', 'Категория не изменена');
+            return back()->with('success', 'Категория не изменена');
 
-        }
-        catch (ValidationException $e) {
+        } catch (ValidationException $e) {
             \Log::error($e->getMessage());
             return back()->with('errors', $e->getMessage());
         }
 
     }
 
-    public function deleteCategory( Request $request)
+    public function deleteCategory(Request $request)
     {
 
         if ($request->ajax()) {

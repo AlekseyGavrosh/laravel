@@ -37,16 +37,6 @@ class RegisterController extends Controller
     {
 
 
-//        try {
-//            $this->validator($request->all())->validate();
-//        }
-//        catch (\Exception $e) {
-//            dd($e);
-//        }
-
-//        Schema::table('users', function ($table) {
-//            $table->string('name');
-//        });
 
         $name = $request->input('name');
         $email = $request->input('email');

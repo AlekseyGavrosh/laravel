@@ -4,14 +4,14 @@ namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Tags extends Model
 {
-    protected  $table = 'categories';
+    protected  $table = 'tags';
     protected  $primaryKey = 'id';
 
 
     protected $fillable = [
-      'title', 'description', 'parent_id'
+        'name'
     ];
 
     protected  $dates = [

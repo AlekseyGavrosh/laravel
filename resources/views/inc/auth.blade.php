@@ -41,7 +41,7 @@
 
                 <p class="fieldset">
                     <label class="image-replace cd-password" for="signup-password">Пароль</label>
-                    <input class="full-width has-padding has-border" id="signup-password" type="text"
+                    <input class="full-width has-padding has-border" id="signup-password" type="password"
                            name="password" placeholder="Пароль">
                     <a href="#0" class="hide-password">Скрыть</a>
                 </p>

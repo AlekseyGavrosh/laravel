@@ -1,3 +1,135 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    background: url("/public/img/fon2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    position: fixed;
+    top: 29px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sidebar .nav {
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+    width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+    margin-left: 0;
+}
+
+.sidebar .nav-link {
+    border-radius: 0;
+    color: black;
+}
+
+.subtitle_menu_left:hover {
+    color: #3b3b1f;
+}
+
+
+
+/*
+ * Dashboard
+ */
+
+/* Placeholders */
+.placeholders {
+    padding-bottom: 3rem;
+}
+
+.placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1030;
+    padding-left: 15px;
+}
+
 
 a:hover, a:focus {
     outline: none;
@@ -84,7 +216,7 @@ a:hover, a:focus {
 .form-horizontal .form-control {
     height: 40px;
     background: rgba(255, 255, 255, 0.2);
-    border: none;
+    border: 1px solid ;
     border-radius: 20px;
     box-shadow: none;
     padding: 0 20px;
@@ -203,4 +335,92 @@ a:hover, a:focus {
     .tab {
         padding: 40px 20px;
     }
+}
+
+.articles_add {
+    margin-top: 8px;
+}
+
+.categories_add {
+    margin-top: 8px;
+}
+
+.article_edit {
+    margin-top: 8px;
+}
+
+.tags_add {
+    margin-top: 8px;
+}
+#block_add_Tags {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+.tags_div {
+    float: left;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 10%;
+    margin: 4px;
+    padding: 4px;
+    background: darkgray;
+    display: flex;
+    max-width: fit-content;
+}
+.data_option {
+    font-size: 10px;
+}
+.name_tags {
+    float: left;
+}
+#tags_select {
+    display: none;
+}
+.tags_del_icon {
+    height: 17px;
+    margin-left: 7px;
+}
+
+.select_category_article {
+    width: fit-content;
+}
+
+.input_text {
+    width: 40%;
+}
+
+.subtitle_block_main {
+    padding: 5px 9px 8px;
+    border-radius: 23%;
+    background: aqua;
+    width: max-content;
+    margin: 4px;
+    font-size: 21px;
+}
+
+.sub_subtitle {
+    padding: 5px 6px 7px;
+    border-radius: 9%;
+    background: burlywood;
+    width: max-content;
+    margin: 11px;
+    font-size: 16px;
+}
+
+/*Тут css для страницы смены пароля*/
+
+.reset_pass_label {
+    padding: 11px 9px 8px;
+    border-radius: 25px;
+    background: black;
+    color: aqua;
+    width: max-content;
+    margin: 4px;
+    font-size: 17px;
+}
+
+.reset_pass_input {
+    padding: 10px;
+    margin: 10px;
 }

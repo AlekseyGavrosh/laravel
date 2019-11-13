@@ -42,6 +42,7 @@ class LoginController extends Controller
             $remember = $request->has('remember') ? true : false;
             if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $remember)) {
 
+            //    dd(Route::getCurrentRoute()->getPath());  тут надо  будет сделать редирект на ту же страницу где сейчас $_SERVER['REQUEST_URI'];
                 return redirect(route('main'))->with('success', trans('Вы успешно залогинены')); // это  должна быть ссылка на файл с сообщениями messages.auth.successLogin
             }
             return back()->with('errors', trans('messages.auth.errorLogin'));
