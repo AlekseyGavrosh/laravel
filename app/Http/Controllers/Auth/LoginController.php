@@ -31,10 +31,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public  function  login(Request $request) {
+    public function login(Request $request, $url = '')
+    {
+
+        $url = !empty($url) ? $url : 'main';
 
         try {
-            $this->validate($request,[
+            $this->validate($request, [
                 'email' => 'required|min:3|max:255',
                 'password' => 'required|min:6'
             ]);
@@ -42,15 +45,14 @@ class LoginController extends Controller
             $remember = $request->has('remember') ? true : false;
             if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $remember)) {
 
-                return redirect(route('main'))->with('success', trans('Вы успешно залогинены')); // это  должна быть ссылка на файл с сообщениями messages.auth.successLogin
+                return redirect(route($url))->with('success', trans('Вы успешно залогинены')); // это  должна быть ссылка на файл с сообщениями messages.auth.successLogin
             }
             return back()->with('errors', trans('messages.auth.errorLogin'));
-        }
-        catch (ValidationException $e) {
+        } catch (ValidationException $e) {
 
             \Log::error($e->getMessage());
             return back()->with('errors', trans('messages.auth.errorLogin'));
-            }
+        }
 
     }
 }

@@ -23,6 +23,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'isAdmin',
     ];
 
     /**
@@ -44,7 +45,7 @@ class User extends Authenticatable
         'name' => 'string',
         'email' => 'string',
         'password' => 'string',
-        'isAdmin' => 'boolean',
+        'isAdmin' => 'integer',
         'remember_token' => 'string',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',

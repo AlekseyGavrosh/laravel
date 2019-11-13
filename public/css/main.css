@@ -1,3 +1,135 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    background: url("/public/img/fon2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    position: fixed;
+    top: 29px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sidebar .nav {
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+    width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+    margin-left: 0;
+}
+
+.sidebar .nav-link {
+    border-radius: 0;
+    color: black;
+}
+
+.subtitle_menu_left:hover {
+    color: #3b3b1f;
+}
+
+
+
+/*
+ * Dashboard
+ */
+
+/* Placeholders */
+.placeholders {
+    padding-bottom: 3rem;
+}
+
+.placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1030;
+    padding-left: 15px;
+}
+
 
 a:hover, a:focus {
     outline: none;
@@ -84,13 +216,12 @@ a:hover, a:focus {
 .form-horizontal .form-control {
     height: 40px;
     background: rgba(255, 255, 255, 0.2);
-    border: none;
+    border: 1px solid ;
     border-radius: 20px;
     box-shadow: none;
     padding: 0 20px;
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
     transition: all 0.3s ease 0s;
 }
 
@@ -203,4 +334,239 @@ a:hover, a:focus {
     .tab {
         padding: 40px 20px;
     }
+}
+
+.articles_add {
+    margin-top: 8px;
+}
+
+.categories_add {
+    margin-top: 8px;
+}
+
+.table_index_cat {
+    position: absolute;
+    width: 82%;
+}
+.block_category_info {
+    width: 16%;
+    float: right;
+}
+.block_tags {
+    margin-top: 5px;
+}
+.title_block {
+    margin-top: 10px;
+    font-size: 19px;
+}
+/*Аккардеон на странице категорий*/
+
+.topnav {
+    font-family: "CenturyGothicRegular","Century Gothic",Arial,Helvetica,sans-serif;
+
+}
+ul.topnav {
+
+    font-size: 1em;
+    line-height: 0.5em;
+    list-style: none outside none;
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+}
+ul.topnav li {
+}
+ul.topnav li a {
+    color: #000;
+    display: block;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 10px;
+    padding: 10px 5px;
+    text-decoration: none;
+    background: #f2f2f2;
+    border-bottom: 1px solid #D3D3D3;
+}
+ul.topnav li a:hover {
+    background-color: #7D7D7D;
+    color: white;
+}
+ul.topnav ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+ul.topnav ul li {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+ul.topnav ul li a {
+    font-size: 15px;
+    font-weight: normal;
+    outline: 0 none;
+    padding-left: 20px;
+}
+ul.topnav ul li a:hover {
+    background-color: #DCDCDC;
+    color: #555;
+}
+ul.topnav ul ul li a {
+    color: silver;
+    padding-left: 40px;
+}
+ul.topnav ul ul li a:hover {
+    background-color: #D7D7D7;
+    color: #555555;
+}
+ul.topnav span {
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.article_edit {
+    margin-top: 8px;
+}
+
+.tags_add {
+    margin-top: 8px;
+}
+#block_add_Tags {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+.tags_div {
+    float: left;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 10%;
+    margin: 4px;
+    padding: 4px;
+    background: darkgray;
+    display: flex;
+    max-width: fit-content;
+}
+.data_option {
+    font-size: 10px;
+}
+.name_tags {
+    float: left;
+}
+#tags_select {
+    display: none;
+}
+.tags_del_icon {
+    height: 17px;
+    margin-left: 7px;
+}
+
+.select_category_article {
+    width: fit-content;
+}
+
+.input_text {
+    width: 40%;
+}
+
+.subtitle_block_main {
+    padding: 8px 7px 11px;
+    border-radius: 14px;
+    background: aqua;
+    width: max-content;
+    margin: 4px;
+    font-size: 21px;
+}
+
+.sub_subtitle {
+    padding: 5px 6px 7px;
+    border-radius: 9%;
+    background: burlywood;
+    width: max-content;
+    margin: 11px;
+    font-size: 16px;
+}
+
+/*Тут css для страницы смены пароля*/
+
+.reset_pass_label {
+    padding: 11px 9px 8px;
+    border-radius: 25px;
+    background: black;
+    color: aqua;
+    width: max-content;
+    margin: 4px;
+    font-size: 17px;
+}
+
+.reset_pass_input {
+    padding: 10px;
+    margin: 10px;
+}
+
+/*Тут css для страницы чтения статьи*/
+
+.article_read_title {
+    background-color: black;
+    color: yellowgreen;
+    margin-left: 22px;
+    padding-left: 13px;
+    padding-right: 11px;
+    padding-bottom: 4px;
+    border: 3px solid silver;
+    border-radius: 10px;
+}
+. {
+    background-color: burlywood;
+    color: brown;
+    /* margin: 14px; */
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 1px;
+    padding-top: -1px;
+    padding-right: 4px;
+    padding-left: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.block_article_page_article {
+    margin-top: 3px;
+}
+.block_edit_href {
+    margin-top: -18px;
+    margin-bottom: 20px;
+    margin-left: -19px;
+}
+.full_text_article {
+    background: white;
 }

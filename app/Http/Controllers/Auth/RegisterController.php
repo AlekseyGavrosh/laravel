@@ -36,18 +36,6 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
 
-
-//        try {
-//            $this->validator($request->all())->validate();
-//        }
-//        catch (\Exception $e) {
-//            dd($e);
-//        }
-
-//        Schema::table('users', function ($table) {
-//            $table->string('name');
-//        });
-
         $name = $request->input('name');
         $email = $request->input('email');
         $password = $request->input('password');
@@ -82,7 +70,7 @@ class RegisterController extends Controller
     {
        // dd($data);
         return Validator::make($data, [
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }

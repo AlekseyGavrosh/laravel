@@ -11,7 +11,7 @@ class Category extends Model
 
 
     protected $fillable = [
-      'title', 'description'
+      'title', 'description', 'parent_id'
     ];
 
     protected  $dates = [
