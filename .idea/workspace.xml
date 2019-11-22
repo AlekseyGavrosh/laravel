@@ -223,16 +223,16 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\OSPanel\domains\LaravelBlog\app\Entities" />
+      <recent name="D:\OpenServer\OSPanel\domains\LaravelBlog\database\migrations" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OpenServer\OSPanel\domains\LaravelBlog\resources\views\menu\users" />
       <recent name="D:\OpenServer\OSPanel\domains\LaravelBlog\resources\views\menu\articles" />
       <recent name="D:\OpenServer\OSPanel\domains\LaravelBlog\resources\views\account" />
       <recent name="D:\OpenServer\OSPanel\domains\LaravelBlog\resources\views\menu" />
       <recent name="D:\OpenServer\OSPanel\domains\LaravelBlog\resources\views\menu\tags" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\OpenServer\OSPanel\domains\LaravelBlog\app\Entities" />
-      <recent name="D:\OpenServer\OSPanel\domains\LaravelBlog\database\migrations" />
     </key>
   </component>
   <component name="RunDashboard">
