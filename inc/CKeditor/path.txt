@@ -1,0 +1,1 @@
+editor/AjexFileManager/ajax/php/ajax.php?isWork

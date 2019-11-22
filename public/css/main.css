@@ -344,6 +344,7 @@ a:hover, a:focus {
     margin-top: 8px;
 }
 
+<<<<<<< HEAD
 .table_index_cat {
     position: absolute;
     width: 82%;
@@ -453,6 +454,8 @@ ul.topnav span {
 
 
 
+=======
+>>>>>>> origin/feature_blog_laravel_1
 .article_edit {
     margin-top: 8px;
 }
@@ -499,8 +502,13 @@ ul.topnav span {
 }
 
 .subtitle_block_main {
+<<<<<<< HEAD
     padding: 8px 7px 11px;
     border-radius: 14px;
+=======
+    padding: 5px 9px 8px;
+    border-radius: 23%;
+>>>>>>> origin/feature_blog_laravel_1
     background: aqua;
     width: max-content;
     margin: 4px;
@@ -532,6 +540,7 @@ ul.topnav span {
     padding: 10px;
     margin: 10px;
 }
+<<<<<<< HEAD
 
 /*Тут css для страницы чтения статьи*/
 
@@ -570,3 +579,5 @@ ul.topnav span {
 .full_text_article {
     background: white;
 }
+=======
+>>>>>>> origin/feature_blog_laravel_1

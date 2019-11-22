@@ -3,9 +3,14 @@
 
     <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <h1>Список категорий</h1>
+<<<<<<< HEAD
         @if (!empty(Auth::user()) && \Auth::user()->isAdmin == 1)
         <a href="{!! route('tags.add') !!}" class="btn btn-info">Добавить Tag</a>
         @endif
+=======
+
+        <a href="{!! route('tags.add') !!}" class="btn btn-info">Добавить Tag</a>
+>>>>>>> origin/feature_blog_laravel_1
 
         <table class="table table-bordered">
             <tr>
@@ -13,9 +18,13 @@
                 <th>Наименование</th>
                 <th>Количество приязаных статей</th>
                 <th>Дата добавления</th>
+<<<<<<< HEAD
                 @if (!empty(Auth::user()) && \Auth::user()->isAdmin == 1)
                 <th>Действия</th>
                     @endif
+=======
+                <th>Действия</th>
+>>>>>>> origin/feature_blog_laravel_1
             </tr>
             <div class="container">
                 @foreach ($tags as $key => $tag)
@@ -28,10 +37,15 @@
                         <td>{{$tag->name}}</td>
                         <td>{{$tag->count_articles}}</td>
                         <td>{{$tag->created_at}}</td>
+<<<<<<< HEAD
                         @if (!empty(Auth::user()) && \Auth::user()->isAdmin == 1)
                         <td><a href="{!! route('tags.edit', ['id' => $tag->id]) !!}">Редактировать</a> ||
                             <a href="javascript:;" class="delete" rel="{{$tag->id}}"> Удалить</a></td>
                             @endif
+=======
+                        <td><a href="{!! route('tags.edit', ['id' => $tag->id]) !!}">Редактировать</a> ||
+                            <a href="javascript:;" class="delete" rel="{{$tag->id}}"> Удалить</a></td>
+>>>>>>> origin/feature_blog_laravel_1
                     </tr>
                 @endforeach
             </div>

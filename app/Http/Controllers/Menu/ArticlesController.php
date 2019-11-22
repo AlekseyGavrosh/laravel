@@ -42,6 +42,7 @@ class ArticlesController extends Controller
         return view('menu.articles.index', ['articles' => $articles]);
     }
 
+
     public function linkedArticlesToTag(int $id) {
 
 
@@ -88,6 +89,7 @@ class ArticlesController extends Controller
         ]);
 
     }
+
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
