@@ -21,13 +21,10 @@
             </div>
         </form>
 
-        @if (\Auth::user()->isAdmin == 1)
-<<<<<<< HEAD
+{{--        @if (\Auth::user()->isAdmin == 1)--}}
 {{--            <a href="{{ route('admin') }}"> В админку</a>--}}
-=======
-            <a href="{{ route('admin') }}"> В админку</a>
->>>>>>> origin/feature_blog_laravel_1
-        @endif
+{{--            <a href="{{ route('admin') }}"> В админку</a>--}}
+{{--        @endif--}}
         <br>
 
 

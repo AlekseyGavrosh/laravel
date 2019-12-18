@@ -60,6 +60,15 @@ h1 {
     border-bottom: 1px solid #eee;
 }
 
+.block_time_fixed {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+}
+.booked-clock-multy-200x-city {
+    width: auto !important;
+}
+
 /*
  * Sidebar
  */
@@ -336,6 +345,22 @@ a:hover, a:focus {
     }
 }
 
+.block_article_main {
+    width: 80%;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 11px;
+}
+
+.read_article_main_page {
+    float: right;
+}
+.full_text_article_main_page {
+    max-height: 200px;
+    overflow-y: auto;
+
+}
 .articles_add {
     margin-top: 8px;
 }
@@ -344,7 +369,6 @@ a:hover, a:focus {
     margin-top: 8px;
 }
 
-<<<<<<< HEAD
 .table_index_cat {
     position: absolute;
     width: 82%;
@@ -424,38 +448,6 @@ ul.topnav span {
     float: right;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> origin/feature_blog_laravel_1
 .article_edit {
     margin-top: 8px;
 }
@@ -502,13 +494,8 @@ ul.topnav span {
 }
 
 .subtitle_block_main {
-<<<<<<< HEAD
-    padding: 8px 7px 11px;
-    border-radius: 14px;
-=======
     padding: 5px 9px 8px;
-    border-radius: 23%;
->>>>>>> origin/feature_blog_laravel_1
+    border-radius: 18px;
     background: aqua;
     width: max-content;
     margin: 4px;
@@ -540,8 +527,6 @@ ul.topnav span {
     padding: 10px;
     margin: 10px;
 }
-<<<<<<< HEAD
-
 /*Тут css для страницы чтения статьи*/
 
 .article_read_title {
@@ -549,7 +534,7 @@ ul.topnav span {
     color: yellowgreen;
     margin-left: 22px;
     padding-left: 13px;
-    padding-right: 11px;
+    padding-right: 6px;
     padding-bottom: 4px;
     border: 3px solid silver;
     border-radius: 10px;
@@ -579,5 +564,19 @@ ul.topnav span {
 .full_text_article {
     background: white;
 }
-=======
->>>>>>> origin/feature_blog_laravel_1
+
+.search_form {
+    display: none;
+}
+.search_form ul {
+    height: 565px;
+    z-index: 50;
+    max-height: calc(100vh - 170px);
+    overflow-y: auto;
+    position: absolute;
+}
+.search_ul {
+    position: absolute;
+    top: 40px;
+    overflow: auto;
+}

@@ -2,90 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="538c1582-3aa2-43ff-b6d8-6f65a9ead44f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Entities/ArticleTags.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Entities/Roles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin2/AccountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin2/ArticlesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin2/CategoriesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Ajax/AjaxController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/quest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/stalingrad.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/TagsRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UsersRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_01_101645_add_votes_to_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_01_153046_create_tags_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_04_105644_create_article_tags_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_13_134140_create_users_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/addArticle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-4.0.0-dist.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/cd-icon-close.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/cd-icon-email.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/cd-icon-menu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/cd-icon-password.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/cd-icon-username.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/cd-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/fon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/fon2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/iconk_del_tags.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/Otchet-promezhutochnoy-attestatsii.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/allbest-o-00227885.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap_second.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/second.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/main/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/articles/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/articles/read.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/categories/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/categories/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/categories/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/users/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/users/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LaravelBlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelBlog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inc/block_time.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Tags.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Account/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Account/AccountController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Menu/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Menu/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Menu/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Menu/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Menu/CategoriesController.php~HEAD" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Menu/CategoriesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Menu/TagsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Menu/TagsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CategoriesRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CategoriesRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump_111s.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump_errors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ru/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/account/change_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/change_password.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/account/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/messages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/auth.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/public.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/public.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu/articles/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu/articles/read.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu/articles/read.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/menu/tags/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu/tags/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -288,6 +229,17 @@
       <workItem from="1574155232446" duration="34839000" />
       <workItem from="1574345186642" duration="860000" />
       <workItem from="1574427603330" duration="2537000" />
+      <workItem from="1574751601741" duration="378000" />
+      <workItem from="1574861388514" duration="1896000" />
+      <workItem from="1574921089301" duration="41869000" />
+      <workItem from="1575355353138" duration="6196000" />
+      <workItem from="1575369941010" duration="1976000" />
+      <workItem from="1575443419535" duration="3988000" />
+      <workItem from="1575467537604" duration="69000" />
+      <workItem from="1575536517605" duration="96000" />
+      <workItem from="1576666847762" duration="2491000" />
+      <workItem from="1576669597473" duration="46000" />
+      <workItem from="1576672407341" duration="3144000" />
     </task>
     <task id="LOCAL-00001" summary="Проверка">
       <created>1571820749553</created>
@@ -345,11 +297,28 @@
       <option name="project" value="LOCAL" />
       <updated>1573629571060</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Доавблен личный кабинет и добавлены  стили">
+      <created>1574432483147</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574432483147</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

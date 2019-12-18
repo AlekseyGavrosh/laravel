@@ -96,9 +96,9 @@ class CategoriesController extends Controller
                 'parent_id' => $request->input('categories')
             ]);
             if ($objCategory) {
-                return redirect()->route('categories')->with('success', 'Категория успешно добавлена');
+                return redirect()->route('categories')->with('success', trans('messages.category.add'));
             }
-            return back()->with('errors', 'категория не добавлена');
+            return back()->with('errors', 'messages.category.errorAdd');
         } catch (ValidationException $e) {
             \Log::error($e->getMessage());
             return back()->with('errors', $e->getMessage());

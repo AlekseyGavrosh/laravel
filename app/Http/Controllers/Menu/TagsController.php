@@ -23,10 +23,7 @@ class TagsController extends Controller
         foreach ($tags->all() as &$item) {
 
             $item->count_articles = DB::table('article_tags')
-<<<<<<< HEAD
                 ->join('articles', 'article_tags.article_id', '=', 'articles.id')
-=======
->>>>>>> origin/feature_blog_laravel_1
                 ->where('tags_id', '=', $item->id)
                 ->count();
 

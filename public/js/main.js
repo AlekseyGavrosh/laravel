@@ -8,7 +8,10 @@ jQuery(document).ready(function ($) {
         $tab_signup = $form_modal_tab.children('li').eq(1).children('a'),
         $forgot_password_link = $form_login.find('.cd-form-bottom-message a'),
         $back_to_login_link = $form_forgot_password.find('.cd-form-bottom-message a'),
-        $main_nav = $('.main-nav')
+        $main_nav = $('.main-nav'),
+        $terms_of_use = $('.terms_of_use'),
+        $block_terms_of_use = $('.block_terms_of_use'),
+        $close_terms_of_use = $('.close')
 
     //открыть модальное окно
     $main_nav.on('click', function (event) {
@@ -27,11 +30,21 @@ jQuery(document).ready(function ($) {
 
     })
 
+    $terms_of_use.on('click', function (event) {
+
+        $block_terms_of_use.addClass('is-visible')
+    })
+
     //закрыть модальное окно
     $('.cd-user-modal').on('click', function (event) {
         if ($(event.target).is($form_modal) || $(event.target).is('.cd-close-form')) {
+            $block_terms_of_use.removeClass('is-visible')
             $form_modal.removeClass('is-visible')
         }
+    })
+    //закрыть модальное окно
+    $close_terms_of_use.on('click', function (event) {
+        $block_terms_of_use.removeClass('is-visible')
     })
     //закрыть модальное окно нажатье клавиши Esc
     $(document).keyup(function (event) {
@@ -263,6 +276,38 @@ jQuery(document).ready(function ($) {
             event.preventDefault()
             return false
         }
+    })
+
+    $('.booked-clock-multy-200x-city').css('width', 'auto')
+
+    setTimeout(function () {
+
+        $('.booked-clock-multy-200x-city').css('width', 'auto')
+
+    }, 2)
+
+    $('#search').on('input', function (ev) {
+        let search = $(ev.target).val()
+
+        $('.search_ul').empty()
+
+        $.ajax({
+            method: 'POST',
+            url: '/search',
+            //   headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            data: {search: search},
+
+            success: function (data) {
+                if (data === 'false') {
+                    $('.search_ul').append('<li><a href=#>Ничего не найдено</a></li>')
+                } else {
+                    $.each(JSON.parse(data), function (key, value) {
+                        $('.search_ul').append('<li><a href=' + key + '>' + value + '</a></li>')
+                    })
+                }
+            }
+        })
+
     })
 
 })

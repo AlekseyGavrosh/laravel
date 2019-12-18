@@ -13,9 +13,7 @@
                 <th>Автор</th>
                 <th>Категория</th>
                 <th>Дата добавления</th>
-                @if (!empty(Auth::user()) && \Auth::user()->isAdmin == 1)
                 <th>Действия</th>
-                    @endif
             </tr>
             <div class="container">
                 @foreach($articles as $key => $article)
@@ -29,11 +27,12 @@
                         <td>{!! $article->author !!}</td>
                         <td>{!! $article->title_categories !!}</td>
                         <td>{{$article->created_at }}</td>
-                        @if (!empty(Auth::user()) && \Auth::user()->isAdmin == 1)
-                        <td><a href="{!! route('articles.read', ['id' => $article->id]) !!}">Читать</a> ||
-                            <a href="{!! route('articles.edit', ['id' => $article->id]) !!}">Редактировать</a> ||
-                            <a href="javascript:;" class="delete" rel="{{$article->id}}"> Удалить</a></td>
+                        <td><a href="{!! route('articles.read', ['id' => $article->id]) !!}">Читать</a>
+                            @if (!empty(Auth::user()) && \Auth::user()->isAdmin == 1)
+                                ||<a href="{!! route('articles.edit', ['id' => $article->id]) !!}">Редактировать</a> ||
+                                <a href="javascript:;" class="delete" rel="{{$article->id}}"> Удалить</a>
                             @endif
+                        </td>
                     </tr>
                 @endforeach
             </div>

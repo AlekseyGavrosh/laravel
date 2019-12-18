@@ -13,15 +13,28 @@
             <mark class="article_read_title">{{ $article->title }}</mark>
         </p>
         <p class="subtitle_block_main">Привязана к категории:
-            <mark class="article_read_title">{{ $article->cateroryTitle }}</mark>
+            <span class="article_read_title">
+            @if (!empty($article->cateroryTitle))
+                        <a href="">{{ $article->cateroryTitle}}</a>
+                @else
+                    <a href="">Нету</a>.
+                @endif
+        </span>
         </p>
 
         <p class="subtitle_block_main">Прикрипленные теги:
-            <mark class="article_read_title">
-                @foreach($arrTags as $tag)
-                    <a href="">  {{$tag->name}} </a>||
+        <span class="article_read_title">
+            @if (!empty($arrTags) && count($arrTags) > 0)
+                @foreach($arrTags as $key => $tag)
+                    <a href="{!! route('linked.to.tag', ['id' => $tag->id]) !!}">{{$tag->name}}</a>
+                    @if ($key != (count($arrTags) -1)) ||
+                    @else .
+                    @endif
                 @endforeach
-            </mark>
+            @else
+                <a href="">Нету</a>.
+            @endif
+        </span>
         </p>
 
         <div class="block_article_page_article">

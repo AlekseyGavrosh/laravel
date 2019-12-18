@@ -13,11 +13,11 @@
                     <input type="email" id="myEmail" name="email" class="form-control" placeholder="Email">
                     <label for="myPassword">Пароль</label>
                     <input type="password" id="myPassword" name="password" class="form-control" placeholder="Пароль">
-                    <p><input type="checkbox" name="remember"> Запомнить пароль ?</p>
+                    <p class="block_remember_me"><input type="checkbox" name="remember"> Запомнить пароль ?</p>
                     <button type="submit" class="btn btn-primary">Авторизация</button>
                 </div>
             </form>
-
+            <p class="terms_of_use"><a href="#0">Правила пользования</a></p>
             <p class="cd-form-bottom-message"><a href="#0">Забыли свой пароль?</a></p>
             <!-- <a href="#0" class="cd-close-form">Close</a> -->
         </div> <!-- cd-login -->
@@ -46,11 +46,11 @@
                     <a href="#0" class="hide-password">Скрыть</a>
                 </p>
 
-                <p><input type="checkbox" name="remember"> Запомнить пароль ?</p>
+                <p class="block_remember_me"><input type="checkbox" name="remember"> Запомнить пароль ?</p>
 
                 <p class="fieldset">
                     <input type="checkbox" id="accept-terms">
-                    <label for="accept-terms">Я согласен с <a href="#0">Условиями</a></label>
+                    <label for="accept-terms">Я согласен с <a class="terms_of_use_for_register terms_of_use" href="#0">Условиями</a></label>
                 </p>
 
                 <p class="fieldset">
@@ -84,3 +84,18 @@
         <a href="#0" class="cd-close-form">Закрыть</a>
     </div> <!-- cd-user-modal-container -->
 </div> <!-- cd-user-modal -->
+<div class="overlay_popup"></div>
+<div class="block_terms_of_use">
+    <a href="#" class="close"></a>
+    <p>loren*100Не следует, однако, забывать, что укрепление и развитие внутренней структуры говорит о возможностях
+        экспериментов, поражающих по своей масштабности и грандиозности. Разнообразный и богатый опыт говорит нам,
+        что высококачественный прототип будущего проекта выявляет срочную потребность приоритизации разума над
+        эмоциями. Кстати, базовые сценарии поведения пользователей освещают чрезвычайно интересные особенности
+        картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+        совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Сложно сказать, почему
+        реплицированные с зарубежных источников, современные исследования лишь добавляют фракционных разногласий и
+        ассоциативно распределены по отраслям. Безусловно, перспективное планирование играет важную роль в
+        формировании прогресса профессионального сообщества.</p>
+
+
+</div>

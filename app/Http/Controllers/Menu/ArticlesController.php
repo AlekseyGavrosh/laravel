@@ -61,7 +61,7 @@ class ArticlesController extends Controller
 
         return view('menu.articles.index', ['articles' => $articles]);
 
-        return $this->belongsToMany(Tags::class, 'article_tags', 'article_id', 'tags_id');
+//        return $this->belongsToMany(Tags::class, 'article_tags', 'article_id', 'tags_id');
     }
 
 
@@ -78,7 +78,9 @@ class ArticlesController extends Controller
 
         $mainCategories = $objArticle->categories;
         $mainCategories = $mainCategories->all();
-        $objArticle->cateroryTitle = $mainCategories[0]->title;
+        if (!empty($mainCategories)) {
+            $objArticle->cateroryTitle = $mainCategories[0]->title;
+        }
 
         $mainTags = $objArticle->tags;
 

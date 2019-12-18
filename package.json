@@ -19,6 +19,7 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
-        "alertifyjs": "^1.12.0"
+        "alertifyjs": "^1.12.0",
+        "gulp": "^4.0.2"
     }
 }
