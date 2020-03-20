@@ -49,7 +49,6 @@ class CategoriesController extends Controller
 
     /**
      * Строим дерево каталогов
-     *
      * @param $by
      * @param int $level
      *
@@ -59,12 +58,10 @@ class CategoriesController extends Controller
     public function getCategoryBy($by, $level = -1)
     {
         $level++;
-
         $categories = (array)DB::select('select * from categories where parent_id = ?', [$by]);
 
         if ($categories) {
             foreach ($categories as $key => &$category) {
-
                 $category->item = $this->getCategoryBy($category->id, $level);
             }
         }
@@ -96,9 +93,9 @@ class CategoriesController extends Controller
                 'parent_id' => $request->input('categories')
             ]);
             if ($objCategory) {
-                return redirect()->route('categories')->with('success', 'Категория успешно добавлена');
+                return redirect()->route('categories')->with('success', trans('messages.category.add'));
             }
-            return back()->with('errors', 'категория не добавлена');
+            return back()->with('errors', 'messages.category.errorAdd');
         } catch (ValidationException $e) {
             \Log::error($e->getMessage());
             return back()->with('errors', $e->getMessage());

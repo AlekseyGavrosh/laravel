@@ -45,9 +45,14 @@ class LoginController extends Controller
             $remember = $request->has('remember') ? true : false;
             if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $remember)) {
 
-                return redirect(route($url))->with('success', trans('Вы успешно залогинены')); // это  должна быть ссылка на файл с сообщениями messages.auth.successLogin
+          //      dd($request->user()->name);
+
+//                @lang('messages.Hello', ['name' => 'John'])
+//
+                return redirect(route($url))->with('success', trans('messages.auth.successLogin', ['name' => $request->user()->name]));
+//                return redirect()->intended('dashboard'); это переброска на страницу куда требуется права
             }
-            return back()->with('errors', trans('messages.auth.errorLogin'));
+            return back()->with('errors', trans('messages.auth.errorLogin', ['name' => $request->input('email')]));
         } catch (ValidationException $e) {
 
             \Log::error($e->getMessage());

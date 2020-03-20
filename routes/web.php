@@ -2,6 +2,9 @@
 
 Route::get('/', 'MainController@index')->name('main'); // главная страница
 
+
+Route::post('/search', 'MainController@search')->name('search');
+
 //левая колонка меню
 
 Route::get('/categories', 'Menu\CategoriesController@index')->name('categories');
@@ -10,6 +13,7 @@ Route::get('articles/linked/{id}', 'Menu\ArticlesController@linkedArticlesToTag'
 // Articles
 
 Route::get('articles', 'Menu\ArticlesController@index')->name('articles');
+Route::get('/articles/read/{id}', 'Menu\ArticlesController@readArticle')->where('id', '\d+')->name('articles.read');
 
 // Tags
 
@@ -73,7 +77,6 @@ Route::group(['middleware' => 'admin'], function () {
 
     // Articles
 
-    Route::get('/articles/read/{id}', 'Menu\ArticlesController@readArticle')->where('id', '\d+')->name('articles.read');
     Route::get('/articles/add', 'Menu\ArticlesController@addArticle')->name('articles.add');
     Route::post('articles/add', 'Menu\ArticlesController@addRequestArticle')->name('articles.add');
     Route::get('articles/edit/{id}', 'Menu\ArticlesController@editArticles')->where('id', '\d+')->name('articles.edit');

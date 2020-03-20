@@ -39,6 +39,24 @@ class ArticlesController extends Controller
             ->select('articles.*', 'categories.title as title_categories')
             ->paginate(10);
 
+//        Schema::table('comments', function (Blueprint $table) {
+//            $table->text('comment', 3000)->change();
+//        });
+
+//        if (Schema::hasColumn('comments', 'comment')) {
+//            var_dump(333);
+//        }
+//        if (Schema::hasColumn('comments', 'email')) {
+//            var_dump(999);
+//        }
+
+//        $objComments = Comments::find(1);
+//        if (!$objComments) {
+//            return abort(404);
+//        }
+//
+//        $mainComments = $objComments->articles;
+
         return view('menu.articles.index', ['articles' => $articles]);
     }
 
@@ -61,7 +79,7 @@ class ArticlesController extends Controller
 
         return view('menu.articles.index', ['articles' => $articles]);
 
-        return $this->belongsToMany(Tags::class, 'article_tags', 'article_id', 'tags_id');
+//        return $this->belongsToMany(Tags::class, 'article_tags', 'article_id', 'tags_id');
     }
 
 
@@ -78,14 +96,55 @@ class ArticlesController extends Controller
 
         $mainCategories = $objArticle->categories;
         $mainCategories = $mainCategories->all();
-        $objArticle->cateroryTitle = $mainCategories[0]->title;
+        if (!empty($mainCategories)) {
+            $objArticle->cateroryTitle = $mainCategories[0]->title;
+        }
 
         $mainTags = $objArticle->tags;
+
+        $comments = $objArticle->comments;
+        $arrayCommentsNoMain = [];
+        $arrayMainComments = [];
+
+        foreach ($comments->all() as $comment) {
+            $comment = (object)$comment;
+            $com = [];
+            $com['id'] = $comment->id;
+            $com['user_id'] = $comment->user_id;
+
+            $user = DB::table('users')->where('id', $com['user_id'])->first();
+            if (!empty($user)) {
+                $com['user']['name'] = $user->name;
+            }
+
+            $com['status'] = $comment->status;
+            $com['comment'] = $comment->comment;
+            $com['created_at'] = $comment->created_at;
+            $com['updated_at'] = $comment->updated_at;
+            $com['parent_id'] = $comment->parent_id;
+            $com['first_parent'] = $comment->first_parent;
+            $com['theme_id'] = $comment->theme_id;
+            $com['plus'] = $comment->plus;
+            $com['minus'] = $comment->minus;
+
+            if (empty($comment->parent_id)) {
+                $arrayMainComments[$com['id']] = $com;
+            }
+            else {
+                $arrayCommentsNoMain[$com['parent_id']][] = $com;
+            }
+        }
+        $comments = self::sortArrayComments($arrayMainComments, $arrayCommentsNoMain);
+
+        if (!empty($mainCategories)) {
+            $objArticle->cateroryTitle = $mainCategories[0]->title;
+        }
 
         return view('menu.articles.read', [
             'article' => $objArticle,
             'categories' => $categories,
-            'arrTags' => $mainTags
+            'arrTags' => $mainTags,
+            'comments' => $comments,
         ]);
 
     }
@@ -254,6 +313,24 @@ class ArticlesController extends Controller
             $objArticle = new Article();
             $objArticle->where('id', $id)->delete();
             echo 'success';
+        }
+    }
+
+    public function sortArrayComments($mainComment, $restComments)
+    {
+        $ostArray = [];
+
+        foreach ($restComments as $parent_id => $comment) {
+            if (!empty($mainComment[$parent_id])) {
+                $mainComment['filial'][$comment['id']] = $comment;
+            } else {
+                $ostArray[$comment['id']][] = $comment;
+            }
+        }
+        if (empty($ostArray)) {
+            return $mainComment;
+        } else {
+            self::sortArrayComments($mainComment, $ostArray);
         }
     }
 

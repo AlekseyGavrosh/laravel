@@ -275,7 +275,7 @@ xsigin/signup popup
   background: #FFF;
   margin: 3em auto 4em;
   cursor: auto;
-  border-radius: 0.25em;
+  border-radius: 2.25em;
   -webkit-transform: translateY(-30px);
   -moz-transform: translateY(-30px);
   -ms-transform: translateY(-30px);
@@ -324,6 +324,69 @@ xsigin/signup popup
     height: 70px;
     line-height: 70px;
   }
+}
+
+.block_terms_of_use {
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    align-content: center;
+    width: 50%;
+    height: 80%;
+    background: black;
+    z-index: 3;
+    padding: 3%;
+    border-radius: 10%;
+    color: aquamarine;
+    overflow-y: auto;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.terms_of_use {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+.terms_of_use a {
+    color: black;
+    text-decoration: underline;
+}
+.block_terms_of_use.is-visible {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s 0, visibility 0 0;
+    -moz-transition: opacity 0.3s 0, visibility 0 0;
+    transition: opacity 0.3s 0, visibility 0 0;
+}
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: azure;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
 }
 .cd-form {
   padding: 1.4em;
@@ -547,4 +610,12 @@ xsigin/signup popup
 }
 #cd-login.is-selected, #cd-signup.is-selected, #cd-reset-password.is-selected {
   display: block;
+}
+.block_remember_me {
+    margin-top: 10px;
+}
+
+.terms_of_use_for_register {
+    margin: 0px;
+    position: inherit;
 }
