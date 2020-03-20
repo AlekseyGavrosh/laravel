@@ -49,7 +49,6 @@ class CategoriesController extends Controller
 
     /**
      * Строим дерево каталогов
-     *
      * @param $by
      * @param int $level
      *
@@ -59,12 +58,10 @@ class CategoriesController extends Controller
     public function getCategoryBy($by, $level = -1)
     {
         $level++;
-
         $categories = (array)DB::select('select * from categories where parent_id = ?', [$by]);
 
         if ($categories) {
             foreach ($categories as $key => &$category) {
-
                 $category->item = $this->getCategoryBy($category->id, $level);
             }
         }

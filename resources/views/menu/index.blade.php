@@ -5,7 +5,7 @@
 
         <div class="block_edit_href">
             <a href="{!! route('articles') !!}">
-                <mark class="article_read_title">Статьи на сайте</mark>
+                <mark class="href_articles_title">Статьи на сайте</mark>
             </a>
         </div>
 

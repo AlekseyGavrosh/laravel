@@ -226,12 +226,11 @@ a:hover, a:focus {
     height: 40px;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid ;
-    border-radius: 20px;
+    border-radius: 17px;
     box-shadow: none;
     padding: 0 20px;
     font-size: 14px;
     font-weight: bold;
-    transition: all 0.3s ease 0s;
 }
 
 .form-horizontal .form-control:focus {
@@ -346,11 +345,11 @@ a:hover, a:focus {
 }
 
 .block_article_main {
-    width: 80%;
+    width: 95%;
     border: 1px solid silver;
     border-radius: 10px;
-    margin: 10px;
-    padding: 11px;
+    padding: 6px;
+    margin-top: 5px;
 }
 
 .read_article_main_page {
@@ -494,12 +493,12 @@ ul.topnav span {
 }
 
 .subtitle_block_main {
-    padding: 5px 9px 8px;
-    border-radius: 18px;
+    padding: 1px 8px 1px 6px;
+    border: 2px solid silver;
+    height: 19px;
+    border-radius: 5px;
     background: aqua;
     width: max-content;
-    margin: 4px;
-    font-size: 21px;
 }
 
 .sub_subtitle {
@@ -529,15 +528,21 @@ ul.topnav span {
 }
 /*Тут css для страницы чтения статьи*/
 
-.article_read_title {
+.href_articles_title {
     background-color: black;
     color: yellowgreen;
-    margin-left: 22px;
-    padding-left: 13px;
-    padding-right: 6px;
-    padding-bottom: 4px;
-    border: 3px solid silver;
+    padding: 1px 6px 2px 7px;
+    border: 2px solid silver;
     border-radius: 10px;
+}
+
+.article_read_title {
+    height: fit-content;
+    background-color: black;
+    color: yellowgreen;
+    padding: 0px 3px 1px 9px;
+    border: 2px solid silver;
+    border-radius: 8px;
 }
 . {
     background-color: burlywood;
@@ -556,10 +561,45 @@ ul.topnav span {
 .block_article_page_article {
     margin-top: 3px;
 }
+
+.block_info_article {
+    margin: 4px;
+    display: flex;
+}
+.block_full_text {
+    display: block;
+}
+
+.block_comments {
+    display: block;
+}
+.block_comment {
+    border-radius: 15px;
+    padding: 4px;
+    border: 2px solid;
+    margin: 6px;
+}
+.block_info_comment {
+    width: 100%;
+    height: 20px;
+    padding: 2px;
+    margin: 2px;
+}
+.block_time_comment {
+    float: left;
+}
+.block_rate_comment{
+    float: right;
+}
+.block_comment_user_and_info {
+    display: flex;
+    padding: 5px;
+}
+.block_text_comment {
+    margin-left: 10px;
+}
 .block_edit_href {
     margin-top: -18px;
-    margin-bottom: 20px;
-    margin-left: -19px;
 }
 .full_text_article {
     background: white;
@@ -579,4 +619,23 @@ ul.topnav span {
     position: absolute;
     top: 40px;
     overflow: auto;
+}
+.block_info_article {
+    .block_comment {
+
+    }
+}
+
+.subtitle_block_comment {
+    padding: 1px 8px 1px 6px;
+    border: 2px solid silver;
+    height: 19px;
+    border-radius: 5px;
+    background: aqua;
+    width: max-content;
+}
+
+.comm {
+    background: #fff;
+    padding: 15px 25px;
 }
